@@ -1,0 +1,9 @@
+[
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "models",
+    "section": "",
+    "text": "Public opinion polls offer valuable, though sometimes limited, insights into voter preferences during election campaigns. Drawing on March 2024 survey data from YouGov, which includes responses from 1,559 U.S. adults, we estimate the share of votes Joe Biden is likely to receive in the upcoming November election.However, a potential weakness in our model is that the polling data may not fully represent likely voters, and voter preferences may shift between the time of the survey and the actual election. We model voter support, measured as whether a respondent plans to vote for Joe Biden or not, as a logistic function of age, education, income, and party affiliation. Support for Biden shows no strong differences across groups; for example, Republicans have an estimated effect of -0.064 with a 95% CI from -0.371 to 0.243.\n\\[P(Y = 1) = \\frac{1}{1 + e^{-(\\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_n X_n)}}\\]\nwith \\(Y \\sim \\text{Bernoulli}(\\rho)\\) where \\(\\rho\\) is the probability above.\n\\[\n\\hat{Y}_i = 0.42 + 0.10 \\cdot \\text{Age65Plus}_i - 0.08 \\cdot \\text{NoCollege}_i + 0.25 \\cdot \\text{Democrat}_i - 0.15 \\cdot \\text{Republican}_i\n\\]\n\n\n\n\n\n\n\n\nLogistic Regression Results\n\n\nPredicting Support for Biden\n\n\nVariable\nEstimate\nLower 95% CI\nUpper 95% CI\n\n\n\n\n(Intercept)\n0.084\n-0.458\n0.627\n\n\nage\n-0.002\n-0.009\n0.005\n\n\neducationNoCollege\n-0.143\n-0.392\n0.105\n\n\nparty_idIndependent\n0.020\n-0.289\n0.329\n\n\nparty_idRepublican\n-0.064\n-0.371\n0.243\n\n\nincome\n0.000\n0.000\n0.000"
+  }
+]
